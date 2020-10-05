@@ -1,7 +1,7 @@
 import 'react-native-gesture-handler'
-import React,{useContext, useState} from 'react'
+import React, { useContext, useState } from 'react'
 import { View, StyleSheet, TextInput, Keyboard, TouchableOpacity, Text, Image } from 'react-native'
-import {AutenticaContext} from '../../context/autentica'
+import { AutenticaContext } from '../../context/autentica'
 
 
 export default function Cadastro() {
@@ -9,15 +9,15 @@ export default function Cadastro() {
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
 
-    const {cadUsuario} = useContext(AutenticaContext)
+    const { cadUsuario } = useContext(AutenticaContext)
 
-    function cadastrando(){
+    function cadastrando() {
         cadUsuario(email, senha, nome)
     }
 
     return (
-        <View style={styles.container}>
-            <View style={styles.areaC}>
+        <View  style={styles.container}>
+            <View  style={styles.areaC}>
                 <Image style={styles.img} source={require('../../images/police.png')} />
                 <Text style={styles.textoTitulo}> LifeGuardian </Text>
             </View>
@@ -26,29 +26,32 @@ export default function Cadastro() {
                 <Text style={styles.texto}> Nome: </Text>
 
                 <TextInput placeholder='Digite seu nome'
-                    style={styles.caixa1} 
-                    underlineColorAndroid='transparent' 
+                    style={styles.caixa1}
+                    autoCorrect={false}
+                    autoCapitalize='none'
                     value={nome}
-                    onChangeText={(text) => setNome(text)} 
-                     />
+                    onChangeText={(text) => setNome(text)}
+                />
 
                 <Text style={styles.texto}> E-mail: </Text>
 
                 <TextInput placeholder='Digite seu e-mail'
-                    style={styles.caixa1} 
-                    underlineColorAndroid='transparent'
-                     value={email}
-                     onChangeText={(text) => setEmail(text)} 
-                     />
+                    style={styles.caixa1}
+                    autoCorrect={false}
+                    autoCapitalize='none'
+                    value={email}
+                    onChangeText={(text) => setEmail(text)}
+                />
 
                 <Text style={styles.texto}>Senha: </Text>
 
                 <TextInput placeholder='Digite sua senha'
-                    underlineColorAndroid='transparent'
-                    style={styles.caixa2} 
+                    autoCorrect={false}
+                    autoCapitalize='none'
+                    style={styles.caixa2}
                     value={senha}
-                    onChangeText={(text) => setSenha(text)} 
-                    />
+                    onChangeText={(text) => setSenha(text)}
+                />
 
                 <View style={styles.btnArea}>
 

@@ -1,15 +1,14 @@
-import 'react-native-gesture-handler'
 import React from 'react'
-import {createStackNavigator} from '@react-navigation/stack'
+import {createDrawerNavigator} from '@react-navigation/drawer'
 
 import TelaPrincipal from '../pages/TelaPrincipal'
 
-const AppStack = createStackNavigator()
+const AppDrawer= createDrawerNavigator()
 
 export default function AppRotas() {
     return (
-        <AppStack.Navigator >
-          <AppStack.Screen name='TelaPrincipal' component={TelaPrincipal}/>
-        </AppStack.Navigator>
+        <AppDrawer.Navigator >
+          <AppDrawer.Screen name='TelaPrincipal' component={TelaPrincipal}/>
+        </AppDrawer.Navigator>
     );
   }
