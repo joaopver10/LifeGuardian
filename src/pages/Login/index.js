@@ -66,6 +66,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#0CB7F5',
     justifyContent: 'center',
     alignItems: 'center',
+    
   },
   textoTitulo: {
     fontSize: 25,
@@ -94,7 +95,8 @@ const styles = StyleSheet.create({
     padding: 10,
     width: 260,
     borderColor: 'gray',
-    borderRadius: 3
+    borderRadius: 3,
+    borderBottomColor: '#000',
   },
   caixa2: {
     borderWidth: 1,
@@ -103,7 +105,7 @@ const styles = StyleSheet.create({
     width: 260,
     borderColor: 'gray',
     marginBottom: 15,
-    borderRadius: 3
+    borderRadius: 3,
   },
   texto: {
     marginTop: 10,
