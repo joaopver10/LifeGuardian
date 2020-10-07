@@ -1,6 +1,9 @@
 #  <p> Projeto PCA LifeGuardian </p>
-
+<p align= "center">
 <img alt="License" src="https://img.shields.io/badge/license-MIT-green">
+
+<img alt="License" src="https://img.shields.io/badge/PRs-welcome-blue">
+</p>
 
 ## Pré-requisitos
 
