@@ -1,14 +1,15 @@
-import React,{useContext} from 'react'
-import {View, StyleSheet, Text, TouchableOpacity,Button} from 'react-native'
-import {AutenticaContext} from '../../context/autentica'
+import React, { useContext } from 'react'
+import { AutenticaContext } from '../../context/autentica'
+import Header from '../../components/Header'
+import {Background, TextNome} from './styles'
 
-export default function TelaPrincipal(){
-    const{user, deslogando} = useContext(AutenticaContext)
+export default function TelaPrincipal() {
+    const { user, deslogando } = useContext(AutenticaContext)
 
-    return(
-        <View style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
-            <Text> Seja Bem vindo!! </Text>
-        <Button title='Sair da conta' onPress={ () => deslogando()} />
-        </View>
+    return (
+        <Background>
+            <Header />
+            <TextNome>{user && user.nome}</TextNome>
+        </Background>
     )
 }

@@ -1,4 +1,3 @@
-import 'react-native-gesture-handler'
 import React, { useEffect, useState } from 'react'
 import { StyleSheet, Image, Text, TouchableOpacity, View, Animated } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
