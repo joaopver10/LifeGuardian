@@ -8,8 +8,9 @@ export const AutenticaContext = createContext({})
 export default function AuthProvider({ children }) {
     const [user, setUser] = useState(null)
     const [load, setLoad] = useState(true)
+    const [carregando, setCarregando] = useState(false)
 
-    useEffect( () => {
+    useEffect(() => {
         async function loadStorage() {
             const storageUser = await AsyncStorage.getItem('Auth_user')
 
@@ -24,8 +25,9 @@ export default function AuthProvider({ children }) {
 
     //logando
     async function usuarioEntrando(email, senha) {
+        setCarregando(true)
         await firebase.auth().signInWithEmailAndPassword(email, senha)
-            .then(async(value) => {
+            .then(async (value) => {
                 let uid = value.user.uid
                 await firebase.database().ref('usuarios').child(uid).once('value')
                     .then((snapshot) => {
@@ -36,15 +38,18 @@ export default function AuthProvider({ children }) {
                         }
                         setUser(data)
                         storageUser(data)
+                        setCarregando(false)
                     })
             })
             .catch((error) => {
                 alert(error.code)
+                setCarregando(false)
             })
     }
 
     //cadastrando
     async function cadUsuario(email, senha, nome) {
+        setCarregando(true)
         await firebase.auth().createUserWithEmailAndPassword(email, senha)
             .then(async (value) => {
                 let uid = value.user.uid
@@ -59,11 +64,13 @@ export default function AuthProvider({ children }) {
                         }
                         setUser(data)
                         storageUser(data)
+                        setCarregando(false)
                     })
             })
 
             .catch((error) => {
                 alert(error.code)
+                setCarregando(false)
             })
     }
 
@@ -81,7 +88,7 @@ export default function AuthProvider({ children }) {
 
     return (
 
-        <AutenticaContext.Provider value={{ signed: !!user, user, load, cadUsuario, usuarioEntrando, deslogando }}>
+        <AutenticaContext.Provider value={{ signed: !!user, user, load, cadUsuario, usuarioEntrando, deslogando,carregando }}>
             {children}
         </AutenticaContext.Provider>
     )

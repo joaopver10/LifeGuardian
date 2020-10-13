@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler'
 import React, { useContext, useState } from 'react'
-import { View, StyleSheet, TouchableOpacity, TextInput, Keyboard, Image, Text } from 'react-native'
+import { View, StyleSheet, TouchableOpacity, TextInput, Keyboard, Image, Text, ActivityIndicator } from 'react-native'
 import { AutenticaContext } from '../../context/autentica'
 
 
@@ -8,7 +8,7 @@ export default function Login() {
   const [email, setEmail] = useState('')
   const [senha, setSenha] = useState('')
 
-  const { usuarioEntrando } = useContext(AutenticaContext)
+  const { usuarioEntrando, carregando } = useContext(AutenticaContext)
 
   function entrar() {
     usuarioEntrando(email, senha)
@@ -40,11 +40,18 @@ export default function Login() {
           style={styles.caixa2}
           value={senha}
           onChangeText={(text) => setSenha(text)}
+          secureTextEntry={true}
         />
 
         <View style={styles.btnArea}>
           <TouchableOpacity style={styles.botao} onPress={entrar}>
-            <Text style={styles.textoB} >Logar</Text>
+            {carregando ? (
+              <ActivityIndicator size={20} color="#FFF" />
+            ) : (
+                <Text style={styles.textoB} >Logar</Text>
+              )
+            }
+
           </TouchableOpacity>
         </View>
       </View>
@@ -66,7 +73,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#0CB7F5',
     justifyContent: 'center',
     alignItems: 'center',
-    
+
   },
   textoTitulo: {
     fontSize: 25,

@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler'
 import React, { useContext, useState } from 'react'
-import { View, StyleSheet, TextInput, Keyboard, TouchableOpacity, Text, Image } from 'react-native'
+import { View, StyleSheet, TextInput, Keyboard, TouchableOpacity, Text, Image, ActivityIndicator } from 'react-native'
 import { AutenticaContext } from '../../context/autentica'
 
 
@@ -9,15 +9,15 @@ export default function Cadastro() {
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
 
-    const { cadUsuario } = useContext(AutenticaContext)
+    const { cadUsuario, carregando } = useContext(AutenticaContext)
 
     function cadastrando() {
         cadUsuario(email, senha, nome)
     }
 
     return (
-        <View  style={styles.container}>
-            <View  style={styles.areaC}>
+        <View style={styles.container}>
+            <View style={styles.areaC}>
                 <Image style={styles.img} source={require('../../images/police.png')} />
                 <Text style={styles.textoTitulo}> LifeGuardian </Text>
             </View>
@@ -51,12 +51,19 @@ export default function Cadastro() {
                     style={styles.caixa2}
                     value={senha}
                     onChangeText={(text) => setSenha(text)}
+                    secureTextEntry={true}
                 />
 
                 <View style={styles.btnArea}>
 
                     <TouchableOpacity style={styles.botao} onPress={cadastrando}>
-                        <Text style={styles.textoB}>Cadastrar</Text>
+                        {carregando ? (
+                            <ActivityIndicator size={20} color="#FFF" />
+                        ) : (
+                                <Text style={styles.textoB}>Cadastrar</Text>
+                            )
+                        }
+
                     </TouchableOpacity>
 
                 </View>
