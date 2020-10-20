@@ -13,10 +13,15 @@ export default function AppRotas() {
         drawerContent={ (props) => <CustomDrawer {...props}/>}
          drawerStyle={{
           backgroundColor: '#0798CC'
+          
         }}
         drawerContentOptions={{
+          
           labelStyle:{
-            fontWeight: 'bold'
+            fontWeight: 'bold',
+            alignSelf: 'center',
+            marginRight: -23,
+            fontSize: 15
           },
           activeTintColor: '#FFF',
           activeBackgroundColor: '#4D3FAE',
@@ -24,11 +29,12 @@ export default function AppRotas() {
           inactiveTintColor: '#DDD',
           itemStyle: {
             marginVertical: 5,
-        }
+        },
+        
         }}
         >
           <AppDrawer.Screen name='Início' component={TelaPrincipal}/>
-          <AppDrawer.Screen name='Perfil' component={Perfil}/>
+          <AppDrawer.Screen name='Perfil' component={Perfil} />
         </AppDrawer.Navigator>
     );
   }

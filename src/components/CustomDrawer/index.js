@@ -18,11 +18,12 @@ export default function CustomDrawer(props) {
             </View>
 
             <DrawerItemList {...props} />
-            <DrawerItem
+            <DrawerItem 
                 {...props}
                 label="Sair do app"
                 inactiveBackgroundColor="#c62c36"
                 onPress={() => deslogando()}
+                
             />
         </DrawerContentScrollView>
     )
