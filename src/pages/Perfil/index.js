@@ -9,9 +9,7 @@ export default function Perfil(){
             <Header/>
             <Nome>{user && user.nome}</Nome>
 
-            <Logout onPress={ () => deslogando()}>    
-                <LogoutTexto>Sair</LogoutTexto>
-            </Logout>
+       
         </Container>
     )
 }

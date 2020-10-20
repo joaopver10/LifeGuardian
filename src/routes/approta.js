@@ -3,12 +3,15 @@ import {createDrawerNavigator} from '@react-navigation/drawer'
 
 import TelaPrincipal from '../pages/TelaPrincipal'
 import Perfil from '../pages/Perfil'
+import CustomDrawer from '../components/CustomDrawer'
 
 const AppDrawer= createDrawerNavigator()
 
 export default function AppRotas() {
     return (
-        <AppDrawer.Navigator drawerStyle={{
+        <AppDrawer.Navigator
+        drawerContent={ (props) => <CustomDrawer {...props}/>}
+         drawerStyle={{
           backgroundColor: '#0798CC'
         }}
         drawerContentOptions={{
