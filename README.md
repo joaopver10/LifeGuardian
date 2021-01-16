@@ -28,11 +28,11 @@ width=115  height= 115 >
   </kbd>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <kbd>
-    <img width="215" style="border-radius: 5px" height="515" src="https://github.com/joaopver10/Projeto-PCA-LifeGuardian/blob/main/assets/image1.mp4" alt="Registro">
+    <img width="215" style="border-radius: 5px" height="515" src="https://github.com/joaopver10/Projeto-PCA-LifeGuardian/blob/main/assets/image1.gif" alt="Registro">
   </kbd>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <kbd>
-      <img width="215" style="border-radius: 5px" height="515" src="https://github.com/joaopver10/Projeto-PCA-LifeGuardian/blob/main/assets/image2.mp4" alt="Menu">
+      <img width="215" style="border-radius: 5px" height="515" src="https://github.com/joaopver10/Projeto-PCA-LifeGuardian/blob/main/assets/image2.gif" alt="Menu">
   </kbd>
 </p>
 
