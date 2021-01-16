@@ -11,6 +11,9 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 [Expo](https://expo.io/), [Node.js](https://reactnative.dev/).
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
+# Instale as dependências
+$ npm install
+
 ## Ideia do projeto 
 
 > Status do Projeto: Em desenvolvimento :warning:
