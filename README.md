@@ -24,8 +24,8 @@ width=115  height= 115 >
 
 <p align= "center"> <img src="https://github.com/joaopver10/Projeto-PCA-LifeGuardian/blob/main/assets/print1.jpeg" width=215
     height= 415> 
-    <img src="https://github.com/joaopver10/Projeto-PCA-LifeGuardian/blob/main/assets/print2.jpeg" width=215  height= 415>
-    <img src="https://github.com/joaopver10/Projeto-PCA-LifeGuardian/blob/main/assets/print3.jpeg" width=215  height= 415>
+    <img src="https://github.com/joaopver10/Projeto-PCA-LifeGuardian/blob/main/assets/print2.jpeg" width=215  height= 515>
+    <img src="https://github.com/joaopver10/Projeto-PCA-LifeGuardian/blob/main/assets/print3.jpeg" width=215  height= 515>
 </p>
 
 ### 🛠 Tecnologias
@@ -34,3 +34,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Expo](https://expo.io/)
 - [React Native](https://reactnative.dev/)
+- [Firebase](https://firebase.google.com/?hl=pt)
