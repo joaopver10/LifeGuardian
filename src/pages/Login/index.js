@@ -57,7 +57,7 @@ export default function Login() {
       </View>
 
       <View style={styles.centro}></View>
-      <View style={{ backgroundColor: '#0CB7F5', height: 220, width: 400, marginTop: 140 }} ></View>
+      <View style={{ backgroundColor: '#0CB7F5', height: 220, width: '100%', marginTop: 140 }} ></View>
     </View>
   )
 }
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   areaC: {
-    width: 400,
+    width: '100%',
     height: 200,
     backgroundColor: '#0CB7F5',
     justifyContent: 'center',
