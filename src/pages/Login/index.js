@@ -102,8 +102,7 @@ const styles = StyleSheet.create({
     padding: 10,
     width: 260,
     borderColor: 'gray',
-    borderRadius: 3,
-    borderBottomColor: '#000',
+    borderRadius: 3
   },
   caixa2: {
     borderWidth: 1,
@@ -126,7 +125,7 @@ const styles = StyleSheet.create({
   },
   botao: {
     borderWidth: 1,
-    paddingHorizontal: 75,
+    paddingHorizontal: 60,
     paddingVertical: 10,
     borderRadius: 5,
     backgroundColor: '#6855F2',
