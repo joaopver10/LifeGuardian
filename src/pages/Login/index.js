@@ -125,14 +125,14 @@ const styles = StyleSheet.create({
   },
   botao: {
     borderWidth: 1,
-    paddingHorizontal: 60,
+    paddingHorizontal: 50,
     paddingVertical: 10,
     borderRadius: 5,
     backgroundColor: '#6855F2',
   },
   textoB: {
-    fontSize: 17,
-    fontWeight: 'bold',
+    fontSize: 15,
+    color: 'white'
   }
 
 });

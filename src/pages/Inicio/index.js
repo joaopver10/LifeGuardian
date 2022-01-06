@@ -47,11 +47,11 @@ function Entrar(){
                 <View style={styles.btnArea}>
 
                     <TouchableOpacity style={styles.btnB} onPress={Entrar} >
-                        <Text style={styles.textoB} > Já possui conta?</Text>
+                        <Text style={styles.textoB} > Login</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity style={styles.btnB} onPress={Cadastrar}>
-                        <Text style={styles.textoB} > Se cadastrar</Text>
+                        <Text style={styles.textoB} > Cadastrar</Text>
                     </TouchableOpacity>
 
                 </View>
@@ -95,13 +95,12 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 5,
         backgroundColor: '#6855F2',
-        paddingHorizontal: 10,
+        paddingHorizontal: 15,
         paddingVertical: 10,
         margin: 10
     },
     textoB: {
         fontSize: 15,
-        fontWeight: 'bold',
-
+        color: 'white',
     }
 })

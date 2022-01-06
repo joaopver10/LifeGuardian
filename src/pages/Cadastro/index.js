@@ -157,8 +157,8 @@ const styles = StyleSheet.create({
         fontSize: 15,
     },
     textoB: {
-        fontSize: 16,
-        fontWeight: 'bold',
+        fontSize: 15,
+        color: 'white'
     }
 
 });

@@ -14,7 +14,7 @@ export default function TelaPrincipal() {
         (async () => {
             let { status } = await Location.requestForegroundPermissionsAsync();
             if (status == 'granted') {
-              let location = await Location.getCurrentPositionAsync({enableHighAccuracy: true, timeout:3000, maximumAge: 2000});
+              let location = await Location.getCurrentPositionAsync({ });
               setMapa({
                   latitude: location.coords.latitude,
                   longitude: location.coords.longitude,
