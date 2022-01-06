@@ -10,5 +10,16 @@ export const TextNome= styled.Text`
 font-size: 20px;
 font-weight: bold;
 align-self: center;
-margin-top: 35;
+margin: 35px auto;
+`
+export const Container = styled.View `
+    align-self: center;
+    margin: auto;
+    width: 95%;
+    margin-top: 1px;
+
+    height: 45%;
+    border-width: 5px;
+    border-top-right-radius: 5px;
+
 `
