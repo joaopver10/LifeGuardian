@@ -17,7 +17,6 @@ export const Container = styled.View `
     margin: auto;
     width: 95%;
     margin-top: 1px;
-
     height: 45%;
     border-width: 5px;
     border-top-right-radius: 5px;
