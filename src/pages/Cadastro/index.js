@@ -78,7 +78,6 @@ export default function Cadastro() {
 }
 
 
-
 const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
