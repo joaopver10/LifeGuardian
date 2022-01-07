@@ -1,7 +1,9 @@
 import 'react-native-gesture-handler'
 import React, { useContext, useState } from 'react'
-import { View, StyleSheet, TextInput, Keyboard, TouchableOpacity, Text, Image, ActivityIndicator } from 'react-native'
+import { View, StyleSheet, TextInput, Keyboard, TouchableOpacity, Text, Image, ActivityIndicator, Platform } from 'react-native'
 import { AutenticaContext } from '../../context/autentica'
+import { SafeAreaView } from 'react-native-safe-area-context'
+
 
 
 export default function Cadastro() {
@@ -16,7 +18,7 @@ export default function Cadastro() {
     }
 
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <View style={styles.areaC}>
                 <Image style={styles.img} source={require('../../images/police.png')} />
                 <Text style={styles.textoTitulo}> LifeGuardian </Text>
@@ -70,8 +72,8 @@ export default function Cadastro() {
             </View>
 
             <View style={styles.centro}></View>
-            <View style={{ backgroundColor: '#0CB7F5', height: 220, width: '100%', marginTop: 80 }} ></View>
-        </View>
+            <View style={{ backgroundColor: '#0CB7F5', height: '35%', width: '100%', marginTop: 110 }} ></View>
+        </SafeAreaView>
     )
 }
 
@@ -81,10 +83,12 @@ const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
         justifyContent: 'center',
+        paddingTop: Platform.OS === 'android' ? 25 : 0
+
     },
     areaC: {
         width: '100%',
-        height: 200,
+        height: '23%',
         backgroundColor: '#0CB7F5',
         justifyContent: 'center',
         alignItems: 'center',

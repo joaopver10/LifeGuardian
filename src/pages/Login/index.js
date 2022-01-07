@@ -1,7 +1,8 @@
 import 'react-native-gesture-handler'
 import React, { useContext, useState } from 'react'
-import { View, StyleSheet, TouchableOpacity, TextInput, Keyboard, Image, Text, ActivityIndicator } from 'react-native'
+import { View, StyleSheet, TouchableOpacity, TextInput, Keyboard, Image, Text, ActivityIndicator, Platform } from 'react-native'
 import { AutenticaContext } from '../../context/autentica'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 
 export default function Login() {
@@ -15,7 +16,7 @@ export default function Login() {
   }
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.areaC}>
         <Image style={styles.img} source={require('../../images/police.png')} />
         <Text style={styles.textoTitulo}> LifeGuardian </Text>
@@ -57,8 +58,8 @@ export default function Login() {
       </View>
 
       <View style={styles.centro}></View>
-      <View style={{ backgroundColor: '#0CB7F5', height: 220, width: '100%', marginTop: 140 }} ></View>
-    </View>
+      <View style={{ backgroundColor: '#0CB7F5', height: '33%' , width: '100%', marginTop: 110, justifyContent:'flex-end'}} ></View>
+    </SafeAreaView>
   )
 }
 
@@ -66,14 +67,15 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     justifyContent: 'center',
+    paddingTop: Platform.OS === 'android' ? 25 : 0
+
   },
   areaC: {
     width: '100%',
-    height: 200,
+    height: '33%',
     backgroundColor: '#0CB7F5',
     justifyContent: 'center',
     alignItems: 'center',
-
   },
   textoTitulo: {
     fontSize: 25,
