@@ -4,6 +4,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer'
 import TelaPrincipal from '../pages/TelaPrincipal'
 import Perfil from '../pages/Perfil'
 import CustomDrawer from '../components/CustomDrawer'
+import EntrarEmContato from '../pages/Formulario'
 
 const AppDrawer= createDrawerNavigator()
 
@@ -33,7 +34,7 @@ export default function AppRotas() {
         }}>
           <AppDrawer.Screen name='Início' component={TelaPrincipal} options={{ headerShown: false }} />
           <AppDrawer.Screen name='Perfil' component={Perfil} options={{ headerShown: false }}/>
-          
+          <AppDrawer.Screen name='Contate-nos' component={EntrarEmContato}options={{ headerShown: false }}/>
         </AppDrawer.Navigator>
   );
 }

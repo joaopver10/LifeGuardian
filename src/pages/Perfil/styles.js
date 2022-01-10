@@ -5,7 +5,7 @@ import styled from 'styled-components/native'
 export const Container = styled.View`
 flex: 1;
 
-background-color: #0CB7F5;
+background-color: #F0F2F9;
 `;
 
 export const Nome = styled.Text`

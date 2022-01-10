@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import {Alert, Text, View} from 'react-native'
+import {Alert} from 'react-native'
 import MapView from 'react-native-maps'
 import { Background, TextNome, Container } from './styles'
 import Header from '../../components/Header'
 import * as Location from 'expo-location';
-
 
 
 export default function TelaPrincipal() {
@@ -34,9 +33,8 @@ export default function TelaPrincipal() {
         <Background>
             <Header />
             <TextNome>Sua Localização em tempo real</TextNome>
-            <Container>
                 <MapView
-                    style={{ width: '100%', height: "100%", alignSelf:'center'}}
+                    style={{ width: '100%', height: "45%", alignSelf:'center'}}
                     region={mapa}
                     showsUserLocation
                     loadingEnabled
@@ -44,7 +42,6 @@ export default function TelaPrincipal() {
                     rotateEnabled={true}
 
                 />
-           </Container>
         </Background>
     )
 }

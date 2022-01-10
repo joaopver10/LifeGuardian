@@ -66,6 +66,7 @@ export default function AuthProvider({ children }) {
           .child(uid)
           .set({
             nome: nome,
+            email: email
           })
           .then(() => {
             let data = {
