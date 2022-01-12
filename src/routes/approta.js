@@ -4,7 +4,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer'
 import TelaPrincipal from '../pages/TelaPrincipal'
 import Perfil from '../pages/Perfil'
 import CustomDrawer from '../components/CustomDrawer'
-import EntrarEmContato from '../pages/Formulario'
+import EntrarEmContato from '../pages/Formulario/index'
 
 const AppDrawer= createDrawerNavigator()
 
