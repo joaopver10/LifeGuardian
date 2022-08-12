@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect} from 'react'
 import {Alert} from 'react-native'
 import MapView from 'react-native-maps'
 import { Background, TextNome, Container } from './styles'
@@ -13,7 +13,7 @@ export default function TelaPrincipal() {
         (async () => {
             let { status } = await Location.requestForegroundPermissionsAsync();
             if (status == 'granted') {
-              let location = await Location.getCurrentPositionAsync({ });
+              let location = await Location.getCurrentPositionAsync({enableHighAccuracy: true});
               setMapa({
                   latitude: location.coords.latitude,
                   longitude: location.coords.longitude,
@@ -24,8 +24,7 @@ export default function TelaPrincipal() {
                 Alert.alert('Permissão para acessar a localização foi negado.');
             }
             return status
-          }) 
-          ();
+          })();
         }, []);
        
 
@@ -35,7 +34,7 @@ export default function TelaPrincipal() {
             <TextNome>Sua Localização em tempo real</TextNome>
                 <MapView
                     style={{ width: '100%', height: "45%", alignSelf:'center'}}
-                    region={mapa}
+                    initialRegion={mapa}
                     showsUserLocation
                     loadingEnabled
                     minZoomLevel={18}
