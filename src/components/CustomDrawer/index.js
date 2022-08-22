@@ -8,7 +8,7 @@ export default function CustomDrawer(props) {
     return (
         <DrawerContentScrollView {...props} o>
             <View style={{ alignItems: 'center', justifyContent: 'center', marginTop: 25 }}>
-                <Image source={require('../../../assets/user.png')}
+                <Image source={require('./../../images/user.png')}
                     style={{ width: 85, height: 85 }}
                     resizeMode="contain"
                 />
